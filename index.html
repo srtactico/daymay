@@ -47,8 +47,8 @@
   <div class="w-full mx-auto bg-charcoal relative min-h-screen overflow-x-hidden">
 
     <!-- Navbar -->
-    <nav id="navbar" class="fixed top-0 left-0 right-0 w-full z-50 transition-all duration-500 bg-transparent py-5">
-      <div class="w-full mx-auto px-6 lg:px-16 xl:px-24 2xl:px-32 flex items-center justify-between">
+    <nav id="navbar" class="fixed top-0 left-0 right-0 w-full z-50 transition-all duration-500 bg-transparent py-6">
+      <div class="w-full max-w-[1200px] mx-auto px-6 lg:px-8 flex items-center justify-between">
 
         <a href="#hero" class="flex items-center gap-2 group">
           <span class="text-3xl">🔥</span>
@@ -128,18 +128,18 @@
       </div>
 
       <!-- Content -->
-      <div class="relative z-10 w-full max-w-[1920px] mx-auto px-6 sm:px-12 text-center">
+      <div class="relative z-10 w-full max-w-[1200px] mx-auto px-6 sm:px-8 text-center">
         <!-- Badge -->
         <div
-          class="animate-fade-in inline-flex items-center gap-2 bg-fire/15 border border-fire/30 rounded-full px-5 py-2 mb-8">
-          <span class="text-fire text-sm font-semibold uppercase tracking-widest font-heading">
+          class="animate-fade-in inline-flex items-center gap-2 bg-fire/15 border border-fire/30 rounded-full px-6 py-3 mb-12">
+          <span class="text-fire text-base font-semibold uppercase tracking-widest font-heading">
             📍 Horche, Guadalajara
           </span>
         </div>
 
         <!-- H1 -->
         <h1
-          class="animate-fade-in-up font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
+          class="animate-fade-in-up font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-10">
           <span class="text-offwhite">No es solo pizza.</span><br />
           <span class="text-offwhite">No es solo asador.</span><br />
           <span class="text-fire">Es Daymay.</span>
@@ -147,7 +147,7 @@
 
         <!-- Subtitle -->
         <p
-          class="animate-fade-in-up delay-200 text-offwhite-dark text-lg sm:text-xl md:text-2xl lg:text-3xl max-w-5xl mx-auto mb-10 font-light leading-relaxed">
+          class="animate-fade-in-up delay-200 text-offwhite-dark text-lg sm:text-xl md:text-2xl lg:text-3xl max-w-4xl mx-auto mt-8 mb-16 font-light leading-loose">
           Comida casera, recién hecha y con ingredientes de verdad.
           Del horno de leña a tu mesa — o para que te lo lleves calentito.
         </p>
@@ -183,23 +183,24 @@
     </section>
 
     <!-- Categorías Estrella -->
-    <section id="carta" class="py-32 sm:py-48 bg-charcoal">
-      <div class="reveal w-full mx-auto px-6 lg:px-12 xl:px-24 2xl:px-32">
+    <section id="carta" class="py-32 sm:py-48 lg:py-56 bg-charcoal">
+      <div class="reveal w-full max-w-[1200px] mx-auto px-6 lg:px-8">
         <!-- Section header -->
-        <div class="text-center mb-28 flex flex-col items-center">
-          <span class="font-heading text-fire text-sm uppercase tracking-[0.3em] font-semibold text-center block">
+        <div class="text-center mb-32 flex flex-col items-center">
+          <span
+            class="font-heading text-fire text-base uppercase tracking-[0.3em] font-semibold text-center block mb-4">
             Nuestra Carta
           </span>
-          <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-offwhite mt-4 mb-6 text-center">
+          <h2 class="font-heading text-4xl sm:text-5xl md:text-6xl font-bold text-offwhite mt-4 mb-10 text-center">
             ¿Qué te apetece hoy?
           </h2>
-          <p class="text-offwhite-dark text-lg md:text-xl max-w-2xl mx-auto text-center">
+          <p class="text-offwhite-dark text-xl max-w-3xl mx-auto text-center leading-loose">
             Cuatro mundos de sabor bajo el mismo techo. Todo hecho aquí, todo hecho de verdad.
           </p>
         </div>
 
         <!-- Cards grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-12 sm:gap-16 xl:gap-20 2xl:gap-24">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10 xl:gap-12">
 
           <!-- Card 1 -->
           <div
@@ -216,11 +217,12 @@
                 🔥 Las favoritas
               </span>
             </div>
-            <div class="p-8 text-center flex flex-col items-center justify-center">
+            <div class="p-10 lg:p-12 text-center flex flex-col items-center justify-center">
               <h3
-                class="font-heading text-xl font-bold text-offwhite mb-4 group-hover:text-fire transition-colors duration-300 text-center">
+                class="font-heading text-2xl font-bold text-offwhite mb-6 group-hover:text-fire transition-colors duration-300 text-center">
                 Pizzas al Horno</h3>
-              <p class="text-offwhite-dark text-sm leading-relaxed max-w-sm text-center">Masa artesanal, ingredientes
+              <p class="text-offwhite-dark text-base leading-loose max-w-sm text-center mt-2">Masa artesanal,
+                ingredientes
                 frescos y el sabor inconfundible del horno de leña. Desde las clásicas hasta nuestras creaciones
                 especiales.</p>
             </div>
@@ -244,11 +246,12 @@
                 🥩 Con Wagyu
               </span>
             </div>
-            <div class="p-8 text-center flex flex-col items-center justify-center">
+            <div class="p-10 lg:p-12 text-center flex flex-col items-center justify-center">
               <h3
-                class="font-heading text-xl font-bold text-offwhite mb-4 group-hover:text-fire transition-colors duration-300 text-center">
+                class="font-heading text-2xl font-bold text-offwhite mb-6 group-hover:text-fire transition-colors duration-300 text-center">
                 Hamburguesas Top</h3>
-              <p class="text-offwhite-dark text-sm leading-relaxed max-w-sm text-center">De la smash clásica a nuestra
+              <p class="text-offwhite-dark text-base leading-loose max-w-sm text-center mt-2">De la smash clásica a
+                nuestra
                 joya: la hamburguesa de Wagyu. Carne de primera, pan brioche artesano y salsas caseras.</p>
             </div>
             <div
@@ -271,11 +274,11 @@
                 👨‍🍳 Tradición
               </span>
             </div>
-            <div class="p-8 text-center flex flex-col items-center justify-center">
+            <div class="p-10 lg:p-12 text-center flex flex-col items-center justify-center">
               <h3
-                class="font-heading text-xl font-bold text-offwhite mb-4 group-hover:text-fire transition-colors duration-300 text-center">
+                class="font-heading text-2xl font-bold text-offwhite mb-6 group-hover:text-fire transition-colors duration-300 text-center">
                 El Asador</h3>
-              <p class="text-offwhite-dark text-sm leading-relaxed max-w-sm text-center">Pollos asados dorados y
+              <p class="text-offwhite-dark text-base leading-loose max-w-sm text-center mt-2">Pollos asados dorados y
                 crujientes y paletillas de cordero que se deshacen. La tradición del asador de toda la vida.</p>
             </div>
             <div
@@ -298,11 +301,11 @@
                 🍴 Entrantes
               </span>
             </div>
-            <div class="p-8 text-center flex flex-col items-center justify-center">
+            <div class="p-10 lg:p-12 text-center flex flex-col items-center justify-center">
               <h3
-                class="font-heading text-xl font-bold text-offwhite mb-4 group-hover:text-fire transition-colors duration-300 text-center">
+                class="font-heading text-2xl font-bold text-offwhite mb-6 group-hover:text-fire transition-colors duration-300 text-center">
                 Para Empezar</h3>
-              <p class="text-offwhite-dark text-sm leading-relaxed max-w-sm text-center">Croquetas caseras, patatas
+              <p class="text-offwhite-dark text-base leading-loose max-w-sm text-center mt-2">Croquetas caseras, patatas
                 bravas, alitas crujientes… El aperitivo perfecto mientras esperas el plato fuerte.</p>
             </div>
             <div
@@ -323,37 +326,38 @@
     </section>
 
     <!-- SOCIAL PROOF -->
-    <section id="opiniones" class="py-32 sm:py-48 bg-charcoal-light relative overflow-hidden">
+    <section id="opiniones" class="py-32 sm:py-48 lg:py-56 bg-charcoal-light relative overflow-hidden">
       <div class="absolute top-10 right-10 w-40 h-40 bg-fire/5 rounded-full blur-3xl"></div>
       <div class="absolute bottom-10 left-10 w-60 h-60 bg-mustard/5 rounded-full blur-3xl"></div>
 
-      <div class="reveal w-full mx-auto px-6 lg:px-12 xl:px-24 2xl:px-32 relative z-10">
+      <div class="reveal w-full max-w-[1200px] mx-auto px-6 lg:px-8 relative z-10">
         <!-- Header -->
-        <div class="text-center mb-28 flex flex-col items-center">
+        <div class="text-center mb-32 flex flex-col items-center">
           <span
-            class="font-heading text-fire text-sm uppercase tracking-[0.3em] font-semibold text-center block">Opiniones
+            class="font-heading text-fire text-base uppercase tracking-[0.3em] font-semibold text-center block mb-4">Opiniones
             Reales</span>
-          <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-offwhite mt-4 mb-6 text-center">Lo que
+          <h2 class="font-heading text-4xl sm:text-5xl md:text-6xl font-bold text-offwhite mt-4 mb-10 text-center">Lo
+            que
             dicen nuestros vecinos</h2>
-          <div class="flex items-center justify-center gap-3 mt-4">
-            <div class="flex gap-0.5 text-mustard text-2xl">
+          <div class="flex items-center justify-center gap-4 mt-6">
+            <div class="flex gap-1 text-mustard text-3xl">
               <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
             </div>
-            <span class="text-offwhite text-2xl font-bold font-heading">4.7</span>
-            <span class="text-offwhite-dark text-sm">en Google</span>
+            <span class="text-offwhite text-3xl font-bold font-heading">4.7</span>
+            <span class="text-offwhite-dark text-base">en Google</span>
           </div>
         </div>
 
         <!-- Reviews grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-12 sm:gap-16 xl:gap-20 2xl:gap-24">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10 xl:gap-12">
 
           <!-- Review 1 -->
           <div
-            class="bg-charcoal border border-charcoal-medium rounded-2xl p-8 hover:border-fire/30 transition-all duration-500 group flex flex-col items-center text-center">
+            class="bg-charcoal border border-charcoal-medium rounded-2xl p-10 lg:p-12 hover:-translate-y-2 hover:shadow-2xl hover:border-fire/30 transition-all duration-500 group flex flex-col items-center text-center">
             <div class="flex gap-1 text-mustard text-lg mb-5">
               <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
             </div>
-            <p class="text-offwhite-dark text-base leading-relaxed mb-8 italic flex-grow text-center">
+            <p class="text-offwhite-dark text-lg leading-loose mb-10 italic flex-grow text-center mt-4">
               "¡Los pollos asados son espectaculares! Crujientes por fuera y jugosísimos por dentro. Se nota que es
               comida hecha con cariño, como la de toda la vida."
             </p>
@@ -370,11 +374,11 @@
 
           <!-- Review 2 -->
           <div
-            class="bg-charcoal border border-charcoal-medium rounded-2xl p-8 hover:border-fire/30 transition-all duration-500 group flex flex-col items-center text-center">
+            class="bg-charcoal border border-charcoal-medium rounded-2xl p-10 lg:p-12 hover:-translate-y-2 hover:shadow-2xl hover:border-fire/30 transition-all duration-500 group flex flex-col items-center text-center">
             <div class="flex gap-1 text-mustard text-lg mb-5">
               <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
             </div>
-            <p class="text-offwhite-dark text-base leading-relaxed mb-8 italic flex-grow text-center">
+            <p class="text-offwhite-dark text-lg leading-loose mb-10 italic flex-grow text-center mt-4">
               "Las pizzas del horno de leña no tienen comparación en la zona. Y las hamburguesas de Wagyu... ¡brutales!
               Relación calidad-precio insuperable."
             </p>
@@ -391,11 +395,11 @@
 
           <!-- Review 3 -->
           <div
-            class="bg-charcoal border border-charcoal-medium rounded-2xl p-8 hover:border-fire/30 transition-all duration-500 group flex flex-col items-center text-center">
+            class="bg-charcoal border border-charcoal-medium rounded-2xl p-10 lg:p-12 hover:-translate-y-2 hover:shadow-2xl hover:border-fire/30 transition-all duration-500 group flex flex-col items-center text-center">
             <div class="flex gap-1 text-mustard text-lg mb-5">
               <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
             </div>
-            <p class="text-offwhite-dark text-base leading-relaxed mb-8 italic flex-grow text-center">
+            <p class="text-offwhite-dark text-lg leading-loose mb-10 italic flex-grow text-center mt-4">
               "El trato es familiar y cercano, te sientes como en casa. Los niños repiten siempre. Recoger el pedido es
               rapidísimo, todo listo y calentito."
             </p>
@@ -412,11 +416,11 @@
 
           <!-- Review 4 -->
           <div
-            class="bg-charcoal border border-charcoal-medium rounded-2xl p-8 hover:border-fire/30 transition-all duration-500 group flex flex-col items-center text-center">
+            class="bg-charcoal border border-charcoal-medium rounded-2xl p-10 lg:p-12 hover:-translate-y-2 hover:shadow-2xl hover:border-fire/30 transition-all duration-500 group flex flex-col items-center text-center">
             <div class="flex gap-1 text-mustard text-lg mb-5">
               <span>★</span><span>★</span><span>★</span><span>★</span><span class="text-charcoal-medium">★</span>
             </div>
-            <p class="text-offwhite-dark text-base leading-relaxed mb-8 italic flex-grow text-center">
+            <p class="text-offwhite-dark text-lg leading-loose mb-10 italic flex-grow text-center mt-4">
               "Las paletillas de cordero son para morirse. Cantidad generosísima y un sabor de esos que te hacen volver
               cada fin de semana. ¡Imprescindible!"
             </p>
@@ -436,18 +440,19 @@
     </section>
 
     <!-- HORARIOS -->
-    <section id="horarios" class="py-32 sm:py-48 bg-charcoal relative">
-      <div class="reveal max-w-[1920px] mx-auto px-6 lg:px-12 xl:px-24 2xl:px-32">
-        <div class="text-center mb-20">
-          <span class="font-heading text-fire text-sm uppercase tracking-[0.3em] font-semibold">Cuándo
+    <section id="horarios" class="py-32 sm:py-48 lg:py-56 bg-charcoal relative">
+      <div class="reveal w-full max-w-[1200px] mx-auto px-6 lg:px-8">
+        <div class="text-center mb-32">
+          <span class="font-heading text-fire text-base uppercase tracking-[0.3em] font-semibold mb-4">Cuándo
             encontrarnos</span>
-          <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-offwhite mt-3 mb-4">Horarios y
+          <h2 class="font-heading text-4xl sm:text-5xl md:text-6xl font-bold text-offwhite mt-6 mb-10">Horarios y
             Recogida</h2>
         </div>
 
-        <div class="bg-charcoal-light border border-charcoal-medium rounded-3xl p-8 sm:p-12 lg:p-16 max-w-5xl mx-auto">
+        <div
+          class="bg-charcoal-light border border-charcoal-medium rounded-3xl p-12 sm:p-20 max-w-4xl mx-auto shadow-2xl">
           <!-- Days -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 lg:gap-16 mb-16">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-12 lg:gap-16 mb-20">
             <!-- Open days -->
             <div class="bg-charcoal rounded-2xl p-6 border border-charcoal-medium">
               <div class="flex items-center gap-3 mb-4">
@@ -509,8 +514,8 @@
 
     <!-- FOOTER -->
     <footer id="contacto" class="bg-charcoal-light border-t border-charcoal-medium">
-      <div class="w-full mx-auto px-6 lg:px-12 xl:px-24 2xl:px-32 py-20">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-16 xl:gap-20">
+      <div class="w-full max-w-[1200px] mx-auto px-6 lg:px-8 py-24 lg:py-32">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-16 lg:gap-20">
           <div>
             <div class="flex items-center gap-2 mb-4">
               <span class="text-3xl">🔥</span>
