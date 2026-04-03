@@ -44,13 +44,11 @@
 <body class="bg-[#0a0a0a] text-offwhite font-body min-h-screen">
 
   <!-- Main App Container to center the page and adapt to screen resolution -->
-  <div
-    class="w-full max-w-[1536px] mx-auto bg-charcoal relative min-h-screen shadow-[0_0_50px_rgba(0,0,0,0.5)] overflow-x-hidden">
+  <div class="w-full mx-auto bg-charcoal relative min-h-screen overflow-x-hidden">
 
     <!-- Navbar -->
-    <nav id="navbar"
-      class="fixed top-0 w-full max-w-[1536px] left-1/2 -translate-x-1/2 z-50 transition-all duration-500 bg-transparent py-5">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+    <nav id="navbar" class="fixed top-0 left-0 right-0 w-full z-50 transition-all duration-500 bg-transparent py-5">
+      <div class="w-full mx-auto px-6 lg:px-16 xl:px-24 2xl:px-32 flex items-center justify-between">
 
         <a href="#hero" class="flex items-center gap-2 group">
           <span class="text-3xl">🔥</span>
@@ -130,7 +128,7 @@
       </div>
 
       <!-- Content -->
-      <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center">
+      <div class="relative z-10 w-full max-w-[1920px] mx-auto px-6 sm:px-12 text-center">
         <!-- Badge -->
         <div
           class="animate-fade-in inline-flex items-center gap-2 bg-fire/15 border border-fire/30 rounded-full px-5 py-2 mb-8">
@@ -149,7 +147,7 @@
 
         <!-- Subtitle -->
         <p
-          class="animate-fade-in-up delay-200 text-offwhite-dark text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto mb-10 font-light leading-relaxed">
+          class="animate-fade-in-up delay-200 text-offwhite-dark text-lg sm:text-xl md:text-2xl lg:text-3xl max-w-5xl mx-auto mb-10 font-light leading-relaxed">
           Comida casera, recién hecha y con ingredientes de verdad.
           Del horno de leña a tu mesa — o para que te lo lleves calentito.
         </p>
@@ -186,7 +184,7 @@
 
     <!-- Categorías Estrella -->
     <section id="carta" class="py-32 sm:py-48 bg-charcoal">
-      <div class="reveal max-w-7xl mx-auto px-6 lg:px-12 xl:px-16">
+      <div class="reveal w-full mx-auto px-6 lg:px-12 xl:px-24 2xl:px-32">
         <!-- Section header -->
         <div class="text-center mb-28 flex flex-col items-center">
           <span class="font-heading text-fire text-sm uppercase tracking-[0.3em] font-semibold text-center block">
@@ -201,7 +199,7 @@
         </div>
 
         <!-- Cards grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-12 sm:gap-16 xl:gap-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-12 sm:gap-16 xl:gap-20 2xl:gap-24">
 
           <!-- Card 1 -->
           <div
@@ -329,7 +327,7 @@
       <div class="absolute top-10 right-10 w-40 h-40 bg-fire/5 rounded-full blur-3xl"></div>
       <div class="absolute bottom-10 left-10 w-60 h-60 bg-mustard/5 rounded-full blur-3xl"></div>
 
-      <div class="reveal max-w-7xl mx-auto px-6 lg:px-12 xl:px-16 relative z-10">
+      <div class="reveal w-full mx-auto px-6 lg:px-12 xl:px-24 2xl:px-32 relative z-10">
         <!-- Header -->
         <div class="text-center mb-28 flex flex-col items-center">
           <span
@@ -347,7 +345,7 @@
         </div>
 
         <!-- Reviews grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-12 sm:gap-16 xl:gap-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-12 sm:gap-16 xl:gap-20 2xl:gap-24">
 
           <!-- Review 1 -->
           <div
@@ -439,7 +437,7 @@
 
     <!-- HORARIOS -->
     <section id="horarios" class="py-32 sm:py-48 bg-charcoal relative">
-      <div class="reveal max-w-5xl mx-auto px-6 lg:px-12 xl:px-16">
+      <div class="reveal max-w-[1920px] mx-auto px-6 lg:px-12 xl:px-24 2xl:px-32">
         <div class="text-center mb-20">
           <span class="font-heading text-fire text-sm uppercase tracking-[0.3em] font-semibold">Cuándo
             encontrarnos</span>
@@ -447,9 +445,9 @@
             Recogida</h2>
         </div>
 
-        <div class="bg-charcoal-light border border-charcoal-medium rounded-3xl p-8 sm:p-12 max-w-3xl mx-auto">
+        <div class="bg-charcoal-light border border-charcoal-medium rounded-3xl p-8 sm:p-12 lg:p-16 max-w-5xl mx-auto">
           <!-- Days -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 lg:gap-16 mb-16">
             <!-- Open days -->
             <div class="bg-charcoal rounded-2xl p-6 border border-charcoal-medium">
               <div class="flex items-center gap-3 mb-4">
@@ -511,7 +509,7 @@
 
     <!-- FOOTER -->
     <footer id="contacto" class="bg-charcoal-light border-t border-charcoal-medium">
-      <div class="max-w-7xl mx-auto px-6 lg:px-12 xl:px-16 py-20">
+      <div class="w-full mx-auto px-6 lg:px-12 xl:px-24 2xl:px-32 py-20">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-16 xl:gap-20">
           <div>
             <div class="flex items-center gap-2 mb-4">
