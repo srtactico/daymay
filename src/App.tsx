@@ -246,22 +246,22 @@ function Categories() {
   const ref = useReveal()
   return (
     <section id="carta" className="py-20 sm:py-28 bg-charcoal">
-      <div ref={ref} className="reveal max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div ref={ref} className="reveal max-w-6xl mx-auto px-6 lg:px-12">
         {/* Section header */}
-        <div className="text-center mb-16">
-          <span className="font-heading text-fire text-sm uppercase tracking-[0.3em] font-semibold">
+        <div className="text-center mb-20 flex flex-col items-center">
+          <span className="font-heading text-fire text-sm uppercase tracking-[0.3em] font-semibold text-center block">
             Nuestra Carta
           </span>
-          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-offwhite mt-3 mb-4">
+          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-offwhite mt-4 mb-6 text-center">
             ¿Qué te apetece hoy?
           </h2>
-          <p className="text-offwhite-dark text-lg max-w-2xl mx-auto">
+          <p className="text-offwhite-dark text-lg md:text-xl max-w-2xl mx-auto text-center">
             Cuatro mundos de sabor bajo el mismo techo. Todo hecho aquí, todo hecho de verdad.
           </p>
         </div>
 
         {/* Cards grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
           {categories.map((cat, i) => (
             <div
               key={cat.title}
@@ -284,10 +284,10 @@ function Categories() {
 
               {/* Content */}
               <div className="p-8 text-center flex flex-col items-center justify-center">
-                <h3 className="font-heading text-xl font-bold text-offwhite mb-3 group-hover:text-fire transition-colors duration-300">
+                <h3 className="font-heading text-xl font-bold text-offwhite mb-4 group-hover:text-fire transition-colors duration-300 text-center">
                   {cat.title}
                 </h3>
-                <p className="text-offwhite-dark text-sm leading-relaxed max-w-sm">
+                <p className="text-offwhite-dark text-sm leading-relaxed max-w-sm text-center">
                   {cat.description}
                 </p>
               </div>
@@ -350,13 +350,13 @@ function SocialProof() {
       <div className="absolute top-10 right-10 w-40 h-40 bg-fire/5 rounded-full blur-3xl" />
       <div className="absolute bottom-10 left-10 w-60 h-60 bg-mustard/5 rounded-full blur-3xl" />
 
-      <div ref={ref} className="reveal max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div ref={ref} className="reveal max-w-6xl mx-auto px-6 lg:px-12 relative z-10">
         {/* Header */}
-        <div className="text-center mb-16">
-          <span className="font-heading text-fire text-sm uppercase tracking-[0.3em] font-semibold">
+        <div className="text-center mb-20 flex flex-col items-center">
+          <span className="font-heading text-fire text-sm uppercase tracking-[0.3em] font-semibold text-center block">
             Opiniones Reales
           </span>
-          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-offwhite mt-3 mb-4">
+          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-offwhite mt-4 mb-6 text-center">
             Lo que dicen nuestros vecinos
           </h2>
           <div className="flex items-center justify-center gap-3 mt-4">
@@ -371,7 +371,7 @@ function SocialProof() {
         </div>
 
         {/* Reviews grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
           {reviews.map((review, i) => (
             <div
               key={i}
@@ -388,7 +388,7 @@ function SocialProof() {
               </div>
 
               {/* Quote */}
-              <p className="text-offwhite-dark text-base leading-relaxed mb-8 italic flex-grow">
+              <p className="text-offwhite-dark text-base leading-relaxed mb-8 italic flex-grow text-center">
                 "{review.text}"
               </p>
 
