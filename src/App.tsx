@@ -261,7 +261,7 @@ function Categories() {
         </div>
 
         {/* Cards grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {categories.map((cat, i) => (
             <div
               key={cat.title}
@@ -283,11 +283,11 @@ function Categories() {
               </div>
 
               {/* Content */}
-              <div className="p-5">
-                <h3 className="font-heading text-xl font-bold text-offwhite mb-2 group-hover:text-fire transition-colors duration-300">
+              <div className="p-8 text-center flex flex-col items-center justify-center">
+                <h3 className="font-heading text-xl font-bold text-offwhite mb-3 group-hover:text-fire transition-colors duration-300">
                   {cat.title}
                 </h3>
-                <p className="text-offwhite-dark text-sm leading-relaxed">
+                <p className="text-offwhite-dark text-sm leading-relaxed max-w-sm">
                   {cat.description}
                 </p>
               </div>
@@ -371,14 +371,14 @@ function SocialProof() {
         </div>
 
         {/* Reviews grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {reviews.map((review, i) => (
             <div
               key={i}
-              className="bg-charcoal border border-charcoal-medium rounded-2xl p-6 hover:border-fire/30 transition-all duration-500 group"
+              className="bg-charcoal border border-charcoal-medium rounded-2xl p-8 hover:border-fire/30 transition-all duration-500 group flex flex-col items-center text-center"
             >
               {/* Stars */}
-              <div className="flex gap-0.5 text-mustard text-base mb-4">
+              <div className="flex gap-1 text-mustard text-lg mb-5">
                 {Array.from({ length: review.stars }, (_, j) => (
                   <span key={j}>★</span>
                 ))}
@@ -388,23 +388,23 @@ function SocialProof() {
               </div>
 
               {/* Quote */}
-              <p className="text-offwhite-dark text-sm leading-relaxed mb-5 italic">
+              <p className="text-offwhite-dark text-base leading-relaxed mb-8 italic flex-grow">
                 "{review.text}"
               </p>
 
               {/* Author */}
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-full bg-fire/20 flex items-center justify-center text-fire font-bold text-sm font-heading">
-                    {review.name.charAt(0)}
-                  </div>
-                  <span className="text-offwhite font-medium text-sm">
+              <div className="flex flex-col items-center gap-3 w-full pt-4 border-t border-charcoal-medium/50 mt-auto">
+                <div className="w-12 h-12 rounded-full bg-fire/20 flex items-center justify-center text-fire font-bold text-lg font-heading">
+                  {review.name.charAt(0)}
+                </div>
+                <div className="flex flex-col items-center">
+                  <span className="text-offwhite font-medium w-full block mb-1">
                     {review.name}
                   </span>
+                  <span className="text-fire/70 text-xs font-heading uppercase tracking-widest block">
+                    {review.highlight}
+                  </span>
                 </div>
-                <span className="text-fire/70 text-xs font-heading uppercase tracking-wider">
-                  {review.highlight}
-                </span>
               </div>
             </div>
           ))}
