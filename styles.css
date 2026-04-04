@@ -1,4 +1,19 @@
 /* Global Styles */
+:root {
+  --color-fire: #D4511E;
+  --color-fire-dark: #B8400F;
+  --color-fire-light: #E8733E;
+  --color-charcoal: #1A1A1A;
+  --color-charcoal-light: #2D2D2D;
+  --color-charcoal-medium: #3A3A3A;
+  --color-mustard: #D4A843;
+  --color-mustard-light: #E6C76B;
+  --color-offwhite: #F5F0EB;
+  --color-offwhite-dark: #E8E0D8;
+  --font-heading: 'Oswald', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
