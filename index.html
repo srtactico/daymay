@@ -1,27 +1,24 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Asador Pizzería Daymay | Horche, Guadalajara</title>
+  <title>Asador Pizzería Daymay | Sabor Tradicional en Horno de Piedra</title>
 
   <meta name="description"
-    content="Asador Pizzería Daymay en Horche (Guadalajara). Pizzas al horno, hamburguesas Wagyu, pollo asado y paletillas. Recoge tu pedido caliente o ven a disfrutar." />
+    content="Descubre el auténtico sabor de Asador Pizzería Daymay en Horche. Pizzas al horno de piedra, carnes premium y comida 100% casera hecha al momento." />
   <meta name="keywords"
-    content="pizzería Horche, asador Horche, hamburguesas Wagyu Guadalajara, pollo asado Horche, Daymay" />
+    content="pizzería Horche, asador Guadalajara, horno de piedra, comida casera, hamburguesa wagyu, pollo asado" />
 
-  <!-- Google Fonts: Oswald + Inter -->
+  <!-- Google Fonts: Oswald (Headings) + Inter (Body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap"
     rel="stylesheet">
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="styles.css">
-
-  <!-- Tailwind CSS v3 (CDN más estable para archivos locales) -->
+  <!-- Tailwind CSS v3 -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -31,12 +28,13 @@
             fire: {
               DEFAULT: '#D4511E',
               dark: '#B8400F',
-              light: '#E8733E'
+              light: '#E8733E',
+              glow: 'rgba(212, 81, 30, 0.35)'
             },
             charcoal: {
               DEFAULT: '#1A1A1A',
-              light: '#2D2D2D',
-              medium: '#3A3A3A'
+              light: '#242424',
+              medium: '#333333'
             },
             mustard: {
               DEFAULT: '#D4A843',
@@ -44,7 +42,7 @@
             },
             offwhite: {
               DEFAULT: '#F5F0EB',
-              dark: '#E8E0D8'
+              dark: '#C8BFB5'
             }
           },
           fontFamily: {
@@ -55,545 +53,420 @@
       }
     }
   </script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="bg-[#0a0a0a] text-offwhite font-body min-h-screen">
+<body class="bg-[#0a0a0a] text-offwhite font-body selection:bg-fire selection:text-white">
 
-  <!-- Main App Container to center the page and adapt to screen resolution -->
-  <div class="w-full max-w-[1400px] mx-auto bg-charcoal relative min-h-screen overflow-x-hidden shadow-2xl">
+  <!-- Container for maximum width control -->
+  <div class="max-w-[1600px] mx-auto bg-charcoal relative overflow-x-hidden shadow-[0_0_100px_rgba(0,0,0,0.8)]">
 
     <!-- Navbar -->
-    <nav id="navbar" class="fixed top-0 left-0 right-0 w-full max-w-[1400px] mx-auto z-50 transition-all duration-500 bg-transparent py-6">
-      <div class="w-full max-w-[1000px] mx-auto px-6 lg:px-8 flex items-center justify-between">
-
-        <a href="#hero" class="flex items-center gap-2 group">
-          <span class="text-3xl">🔥</span>
-          <span class="font-heading text-2xl font-bold text-offwhite group-hover:text-fire transition-colors">
+    <nav id="navbar" class="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-[1600px] z-[100] transition-all duration-500 py-8 px-6 lg:px-12 flex justify-center">
+      <div class="w-full max-w-6xl flex items-center justify-between">
+        <a href="#hero" class="flex items-center gap-3 group">
+          <span class="text-3xl filter drop-shadow-[0_0_10px_rgba(212,81,30,0.8)] group-hover:scale-110 transition-transform">🔥</span>
+          <span class="font-heading text-2xl font-bold tracking-tighter text-offwhite group-hover:text-fire transition-colors">
             DAYMAY
           </span>
         </a>
 
-        <!-- Desktop links -->
-        <div class="hidden md:flex items-center gap-8">
-          <a href="#carta"
-            class="font-heading text-sm uppercase tracking-wider hover:text-fire transition-colors duration-300 cursor-pointer">La
-            Carta</a>
-          <a href="#opiniones"
-            class="font-heading text-sm uppercase tracking-wider hover:text-fire transition-colors duration-300 cursor-pointer">Opiniones</a>
-          <a href="#horarios"
-            class="font-heading text-sm uppercase tracking-wider hover:text-fire transition-colors duration-300 cursor-pointer">Horarios</a>
-          <a href="#contacto"
-            class="font-heading text-sm uppercase tracking-wider hover:text-fire transition-colors duration-300 cursor-pointer">Contacto</a>
-          <a href="tel:+34650656634"
-            class="btn-shimmer text-offwhite font-heading text-sm uppercase tracking-wider px-5 py-2.5 rounded-full hover:scale-105 transition-transform duration-300">
-            📞 Llamar y Recoger
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex items-center gap-10">
+          <a href="#secreto" class="font-heading text-sm uppercase tracking-widest hover:text-fire transition-colors">Nuestro Secreto</a>
+          <a href="#carta" class="font-heading text-sm uppercase tracking-widest hover:text-fire transition-colors">La Carta</a>
+          <a href="#opiniones" class="font-heading text-sm uppercase tracking-widest hover:text-fire transition-colors">Opiniones</a>
+          <a href="#horarios" class="font-heading text-sm uppercase tracking-widest hover:text-fire transition-colors">Horarios</a>
+          <a href="tel:+34650656634" class="btn-shimmer px-8 py-3 rounded-full text-sm font-heading font-bold uppercase tracking-widest text-white shadow-xl">
+            Llamar y Pedir
           </a>
         </div>
 
-        <!-- Hamburger -->
-        <button id="mobile-menu-btn" class="md:hidden flex flex-col gap-1.5 group" aria-label="Menú">
-          <span class="w-6 h-0.5 bg-offwhite transition-all duration-300"></span>
-          <span class="w-6 h-0.5 bg-offwhite transition-all duration-300"></span>
-          <span class="w-6 h-0.5 bg-offwhite transition-all duration-300"></span>
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="lg:hidden flex flex-col gap-1.5 group p-2" aria-label="Abrir menú">
+          <span class="w-7 h-[2px] bg-offwhite group-hover:bg-fire transition-all duration-300"></span>
+          <span class="w-7 h-[2px] bg-offwhite group-hover:bg-fire transition-all duration-300"></span>
+          <span class="w-5 h-[2px] bg-offwhite group-hover:bg-fire ml-auto transition-all duration-300"></span>
         </button>
       </div>
 
-      <!-- Mobile menu -->
-      <div id="mobile-menu" class="md:hidden overflow-hidden transition-all duration-500 max-h-0 opacity-0">
-        <div class="bg-charcoal/98 backdrop-blur-lg px-6 py-6 flex flex-col gap-5 border-t border-charcoal-medium">
-          <a href="#carta"
-            class="font-heading text-sm uppercase tracking-wider hover:text-fire transition-colors duration-300">La
-            Carta</a>
-          <a href="#opiniones"
-            class="font-heading text-sm uppercase tracking-wider hover:text-fire transition-colors duration-300">Opiniones</a>
-          <a href="#horarios"
-            class="font-heading text-sm uppercase tracking-wider hover:text-fire transition-colors duration-300">Horarios</a>
-          <a href="#contacto"
-            class="font-heading text-sm uppercase tracking-wider hover:text-fire transition-colors duration-300">Contacto</a>
-          <a href="tel:+34650656634"
-            class="btn-shimmer text-offwhite font-heading text-center text-sm uppercase tracking-wider px-5 py-3 rounded-full mt-2">
-            📞 Llamar y Recoger
-          </a>
+      <!-- Mobile Menu Overlay (JS Handle) -->
+      <div id="mobile-menu" class="absolute top-full left-0 w-full glass-light border-t border-white/5 opacity-0 invisible -translate-y-4 transition-all duration-500 overflow-hidden">
+        <div class="p-8 flex flex-col gap-6 text-center">
+          <a href="#secreto" class="mobile-link font-heading text-xl uppercase tracking-widest hover:text-fire">Nuestro Secreto</a>
+          <a href="#carta" class="mobile-link font-heading text-xl uppercase tracking-widest hover:text-fire">La Carta</a>
+          <a href="#opiniones" class="mobile-link font-heading text-xl uppercase tracking-widest hover:text-fire">Opiniones</a>
+          <a href="#horarios" class="mobile-link font-heading text-xl uppercase tracking-widest hover:text-fire">Horarios</a>
+          <a href="tel:+34650656634" class="btn-shimmer py-4 rounded-full font-heading font-bold uppercase tracking-widest text-white">Llamar Ahora</a>
         </div>
       </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <!-- Background image -->
-      <div class="absolute inset-0">
-        <img src="images/hero_bg.png" alt="Ambiente rústico Daymay" class="w-full h-full object-cover" />
-        <div class="absolute inset-0 bg-gradient-to-b from-charcoal/80 via-charcoal/60 to-charcoal"></div>
-        <div class="absolute inset-0 bg-gradient-to-r from-charcoal/50 to-transparent"></div>
+    <section id="hero" class="relative min-h-[100vh] flex items-center justify-center pt-20 overflow-hidden">
+      <!-- Background Layers -->
+      <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=2070&auto=format&fit=crop" 
+             alt="Pizza en horno de piedra" 
+             class="w-full h-full object-cover hero-bg-pan opacity-40 mix-blend-luminosity" />
+        <div class="absolute inset-0 bg-gradient-to-b from-charcoal/80 via-[#0a0a0a]/90 to-[#0a0a0a]"></div>
+        <div id="ember-container" class="absolute inset-0 pointer-events-none"></div>
       </div>
 
-      <!-- Ember particles effect -->
-      <div class="absolute inset-0 overflow-hidden pointer-events-none">
-        <div class="absolute w-1 h-1 bg-fire rounded-full opacity-60 animate-float"
-          style="left: 15%; top: 20%; animation-delay: 0s; animation-duration: 3s;"></div>
-        <div class="absolute w-1 h-1 bg-fire rounded-full opacity-60 animate-float"
-          style="left: 30%; top: 45%; animation-delay: 0.5s; animation-duration: 3.5s;"></div>
-        <div class="absolute w-1 h-1 bg-fire rounded-full opacity-60 animate-float"
-          style="left: 45%; top: 70%; animation-delay: 1s; animation-duration: 4s;"></div>
-        <div class="absolute w-1 h-1 bg-fire rounded-full opacity-60 animate-float"
-          style="left: 60%; top: 20%; animation-delay: 1.5s; animation-duration: 4.5s;"></div>
-        <div class="absolute w-1 h-1 bg-fire rounded-full opacity-60 animate-float"
-          style="left: 75%; top: 45%; animation-delay: 2s; animation-duration: 5s;"></div>
-        <div class="absolute w-1 h-1 bg-fire rounded-full opacity-60 animate-float"
-          style="left: 90%; top: 70%; animation-delay: 2.5s; animation-duration: 5.5s;"></div>
-      </div>
-
-      <!-- Content -->
-      <div class="relative z-10 w-full max-w-[1000px] mx-auto px-6 sm:px-8 text-center flex flex-col items-center justify-center">
-        <!-- Badge -->
-        <div
-          class="animate-fade-in inline-flex items-center gap-2 bg-fire/15 border border-fire/30 rounded-full px-6 py-3 mb-12">
-          <span class="text-fire text-base font-semibold uppercase tracking-widest font-heading">
-            📍 Horche, Guadalajara
-          </span>
+      <!-- Hero Content -->
+      <div class="relative z-10 w-full max-w-5xl px-6 py-20 flex flex-col items-center text-center">
+        <div class="animate-fade-in-up flex items-center gap-3 glass-light px-6 py-2 rounded-full border border-fire/30 mb-10 overflow-hidden">
+          <span class="flex h-2 w-2 rounded-full bg-fire animate-pulse"></span>
+          <span class="text-fire font-heading text-xs uppercase tracking-[0.3em] font-bold">Auténtico Horno de Piedra</span>
         </div>
 
-        <!-- H1 -->
-        <h1
-          class="animate-fade-in-up font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-10">
-          <span class="text-offwhite">No es solo pizza.</span><br />
-          <span class="text-offwhite">No es solo asador.</span><br />
-          <span class="text-fire">Es Daymay.</span>
+        <h1 class="animate-fade-in-up delay-200 font-heading text-6xl md:text-8xl lg:text-9xl font-bold leading-[0.9] tracking-tighter mb-10">
+          HECHO A <span class="text-fire animate-text-glow">MANO</span>.<br>
+          HECHO <span class="text-mustard">PARA TI</span>.
         </h1>
 
-        <!-- Subtitle -->
-        <p
-          class="animate-fade-in-up delay-200 text-offwhite-dark text-lg sm:text-xl md:text-2xl lg:text-3xl max-w-4xl mx-auto mt-8 mb-16 font-light leading-loose">
-          <strong class="text-offwhite font-medium">Toda la comida es casera, hecha en el momento a mano.</strong><br/>
-          Con ingredientes de verdad, del horno de piedra a tu mesa — o para que te lo lleves calentito.
+        <p class="animate-fade-in-up delay-400 text-offwhite-dark text-lg md:text-2xl max-w-3xl leading-relaxed mb-16 font-light">
+          En Daymay no creemos en lo rápido, sino en lo bien hecho. 
+          <span class="text-offwhite font-medium italic">Toda nuestra comida es 100% casera</span>, 
+          preparada al instante con ingredientes frescos y el toque mágico de nuestro horno de piedra.
         </p>
 
-        <!-- CTA Buttons -->
-        <div class="animate-fade-in-up delay-300 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="#carta"
-            class="btn-shimmer animate-pulse-glow w-full sm:w-auto text-offwhite font-heading text-lg uppercase tracking-wider px-10 py-4 rounded-full hover:scale-105 transition-transform duration-300 font-semibold">
-            🍕 Ver la Carta
+        <div class="animate-fade-in-up delay-600 flex flex-wrap justify-center gap-6">
+          <a href="#carta" class="btn-shimmer px-12 py-5 rounded-full text-lg font-heading font-bold uppercase tracking-widest text-white hover:scale-105 transition-transform">
+            Ver la Carta
           </a>
-          <a href="https://maps.google.com/?q=Asador+Pizzeria+Daymay+Horche" target="_blank" rel="noopener noreferrer"
-            class="w-full sm:w-auto border-2 border-mustard text-mustard font-heading text-lg uppercase tracking-wider px-10 py-4 rounded-full hover:bg-mustard hover:text-charcoal transition-all duration-300 font-semibold">
-            📍 Cómo llegar a recoger
+          <a href="tel:+34650656634" class="px-12 py-5 rounded-full text-lg font-heading font-bold uppercase tracking-widest text-mustard border-2 border-mustard hover:bg-mustard hover:text-charcoal transition-all">
+            Hacer Pedido
           </a>
         </div>
 
-        <!-- Trust badge -->
-        <div class="animate-fade-in delay-500 mt-12 flex items-center justify-center gap-3 text-offwhite-dark">
-          <div class="flex gap-0.5 text-mustard text-xl">
-            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        <!-- Trust Stats -->
+        <div class="animate-fade-in delay-800 mt-20 grid grid-cols-2 md:grid-cols-3 gap-12 border-t border-white/5 pt-12 w-full max-w-4xl">
+          <div class="flex flex-col items-center">
+            <span class="stat-number">4.7</span>
+            <span class="text-xs uppercase tracking-widest text-offwhite-dark mt-2">Puntuación Google</span>
           </div>
-          <span class="text-lg font-semibold">4.7 / 5</span>
-          <span class="text-sm opacity-70">— Google Reviews</span>
+          <div class="flex flex-col items-center">
+            <span class="stat-number">100%</span>
+            <span class="text-xs uppercase tracking-widest text-offwhite-dark mt-2">Masa Casera</span>
+          </div>
+          <div class="hidden md:flex flex-col items-center">
+            <span class="stat-number">+10y</span>
+            <span class="text-xs uppercase tracking-widest text-offwhite-dark mt-2">Tradición en Horche</span>
+          </div>
         </div>
       </div>
 
-      <!-- Scroll indicator -->
-      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-float">
-        <div class="w-6 h-10 border-2 border-offwhite/30 rounded-full flex justify-center pt-2">
-          <div class="w-1 h-3 bg-fire rounded-full animate-fade-in"></div>
+      <!-- Scroll Indicator -->
+      <a href="#secreto" class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 text-offwhite-dark hover:text-fire transition-colors group">
+        <span class="text-[10px] uppercase tracking-[0.5em] font-bold">Descubre más</span>
+        <div class="w-[2px] h-12 bg-gradient-to-b from-fire to-transparent group-hover:h-16 transition-all duration-500"></div>
+      </a>
+    </section>
+
+    <!-- Section: Nuestro Secreto -->
+    <section id="secreto" class="py-40 bg-[#0a0a0a] relative overflow-hidden">
+      <!-- Decorative background -->
+      <div class="absolute -top-40 -right-40 w-96 h-96 bg-fire/10 rounded-full blur-[120px]"></div>
+      <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-mustard/10 rounded-full blur-[120px]"></div>
+
+      <div class="max-w-6xl mx-auto px-6 relative z-10">
+        <div class="reveal flex flex-col items-center text-center mb-24">
+          <span class="font-heading text-fire text-sm uppercase tracking-[0.4em] font-bold mb-6">Filosofía Daymay</span>
+          <h2 class="font-heading text-4xl md:text-6xl font-bold mb-8">El Secreto está en el Tiempo</h2>
+          <span class="section-line"></span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Feature 1 -->
+          <div class="reveal feature-card glass p-12 rounded-[2rem] border border-white/5">
+            <div class="feature-icon mb-10">🏠</div>
+            <h3 class="font-heading text-2xl font-bold mb-6 text-offwhite">100% Casero</h3>
+            <p class="text-offwhite-dark leading-relaxed">
+              No es marketing, es realidad. Desde la masa de nuestras pizzas hasta las salsas y empanados, 
+              todo se elabora cada día en nuestra cocina para mantener el sabor de siempre.
+            </p>
+          </div>
+          <!-- Feature 2 -->
+          <div class="reveal feature-card glass p-12 rounded-[2rem] border border-fire/20 bg-fire/[0.03]">
+            <div class="feature-icon mb-10 border-fire/40 text-fire">🔥</div>
+            <h3 class="font-heading text-2xl font-bold mb-6 text-fire">Horno de Piedra</h3>
+            <p class="text-offwhite-dark leading-relaxed">
+              El corazón de nuestra pizzería. La piedra volcánica y el calor intenso consiguen ese borde crujiente 
+              y esa base perfecta que ninguna máquina moderna puede replicar.
+            </p>
+          </div>
+          <!-- Feature 3 -->
+          <div class="reveal feature-card glass p-12 rounded-[2rem] border border-white/5">
+            <div class="feature-icon mb-10">⏱️</div>
+            <h3 class="font-heading text-2xl font-bold mb-6 text-offwhite">Hecho al Momento</h3>
+            <p class="text-offwhite-dark leading-relaxed">
+              Tu comida no está esperando en una estantería. Empezamos a cocinar justo cuando pides. 
+              Garantizamos que tu pedido llegue a tus manos recién salido del fuego.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Categorías Estrella -->
-    <section id="carta" class="py-32 sm:py-48 lg:py-64 bg-charcoal flex flex-col items-center">
-      <div class="reveal w-full max-w-[1000px] mx-auto px-6 lg:px-8">
-        <!-- Section header -->
-        <div class="text-center mb-32 flex flex-col items-center">
-          <span
-            class="font-heading text-fire text-base uppercase tracking-[0.3em] font-semibold text-center block mb-4">
-            Nuestra Carta
-          </span>
-          <h2 class="font-heading text-4xl sm:text-5xl md:text-6xl font-bold text-offwhite mt-4 mb-10 text-center">
-            ¿Qué te apetece hoy?
-          </h2>
-          <p class="text-offwhite-dark text-xl max-w-3xl mx-auto text-center leading-loose">
-            Cuatro mundos de sabor bajo el mismo techo. Todo hecho aquí, todo hecho de verdad.
-          </p>
+    <hr class="fire-divider">
+
+    <!-- Section: La Carta (Premium Glimpse) -->
+    <section id="carta" class="py-40 bg-charcoal relative">
+      <div class="max-w-[1400px] mx-auto px-6">
+        <div class="reveal flex flex-col items-center text-center mb-24">
+          <span class="font-heading text-mustard text-sm uppercase tracking-[0.4em] font-bold mb-6">Menú Seleccionado</span>
+          <h2 class="font-heading text-4xl md:text-6xl font-bold mb-8">Nuestras Especialidades</h2>
+          <span class="section-line border-mustard"></span>
         </div>
 
-        <!-- Cards grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10 xl:gap-12">
-
-          <!-- Card 1 -->
-          <div
-            class="card-hover group relative rounded-2xl overflow-hidden bg-charcoal-light border border-charcoal-medium delay-100">
-            <div class="relative h-56 sm:h-52 overflow-hidden">
-              <img src="images/hero_pizza.png" alt="Pizzas al Horno"
-                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                loading="lazy" />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-fire/80 to-fire-dark/90 opacity-60 group-hover:opacity-40 transition-opacity duration-500">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Pizza Card -->
+          <div class="reveal card-hover group relative overflow-hidden rounded-3xl bg-charcoal-light border border-white/5">
+            <div class="h-64 overflow-hidden relative">
+              <img src="images/hero_pizza.png" alt="Pizza Premium" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-charcoal via-transparent to-transparent opacity-60"></div>
+              <span class="absolute top-4 left-4 glass px-4 py-1.5 rounded-full text-[10px] uppercase font-bold tracking-widest border border-white/10">Especialidad</span>
+            </div>
+            <div class="p-10">
+              <h3 class="font-heading text-2xl font-bold mb-4 group-hover:text-fire transition-colors">Pizzas Artesanas</h3>
+              <p class="text-offwhite-dark text-sm leading-relaxed mb-8">Base de masa madre horneada sobre piedra. Ingredientes premium seleccionados.</p>
+              <div class="flex items-center justify-between mt-auto">
+                <span class="text-xs uppercase tracking-widest text-[#666]">Desde</span>
+                <span class="font-heading text-xl font-bold text-mustard">9.90€</span>
               </div>
-              <span
-                class="absolute top-4 left-4 bg-charcoal/80 backdrop-blur-sm text-offwhite text-xs font-heading uppercase tracking-wider px-3 py-1.5 rounded-full">
-                🔥 Las favoritas
-              </span>
-            </div>
-            <div class="p-10 lg:p-12 text-center flex flex-col items-center justify-center">
-              <h3
-                class="font-heading text-2xl font-bold text-offwhite mb-6 group-hover:text-fire transition-colors duration-300 text-center">
-                Pizzas al Horno</h3>
-              <p class="text-offwhite-dark text-base leading-loose max-w-sm text-center mt-2">Masa casera hecha a mano en el momento,
-                ingredientes
-                frescos y el sabor inconfundible del horno de piedra. Desde las clásicas hasta nuestras creaciones
-                especiales.</p>
-            </div>
-            <div
-              class="absolute inset-0 rounded-2xl border-2 border-fire/0 group-hover:border-fire/40 transition-all duration-500 pointer-events-none">
             </div>
           </div>
 
-          <!-- Card 2 -->
-          <div
-            class="card-hover group relative rounded-2xl overflow-hidden bg-charcoal-light border border-charcoal-medium delay-200">
-            <div class="relative h-56 sm:h-52 overflow-hidden">
-              <img src="images/burger_wagyu.png" alt="Hamburguesas Top"
-                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                loading="lazy" />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-mustard/70 to-fire/80 opacity-60 group-hover:opacity-40 transition-opacity duration-500">
+          <!-- Burger Card -->
+          <div class="reveal card-hover group relative overflow-hidden rounded-3xl bg-charcoal-light border border-white/5">
+            <div class="h-64 overflow-hidden relative">
+              <img src="images/burger_wagyu.png" alt="Hamburguesa Wagyu" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-charcoal via-transparent to-transparent opacity-60"></div>
+              <span class="absolute top-4 left-4 glass px-4 py-1.5 rounded-full text-[10px] uppercase font-bold tracking-widest border border-white/10">Premium</span>
+            </div>
+            <div class="p-10">
+              <h3 class="font-heading text-2xl font-bold mb-4 group-hover:text-mustard transition-colors">Burgers Wagyu</h3>
+              <p class="text-offwhite-dark text-sm leading-relaxed mb-8">Carne de Wagyu certificada. Pan brioche artesano y salsas caseras secretas.</p>
+              <div class="flex items-center justify-between mt-auto">
+                <span class="text-xs uppercase tracking-widest text-[#666]">Desde</span>
+                <span class="font-heading text-xl font-bold text-mustard">12.50€</span>
               </div>
-              <span
-                class="absolute top-4 left-4 bg-charcoal/80 backdrop-blur-sm text-offwhite text-xs font-heading uppercase tracking-wider px-3 py-1.5 rounded-full">
-                🥩 Con Wagyu
-              </span>
-            </div>
-            <div class="p-10 lg:p-12 text-center flex flex-col items-center justify-center">
-              <h3
-                class="font-heading text-2xl font-bold text-offwhite mb-6 group-hover:text-fire transition-colors duration-300 text-center">
-                Hamburguesas Top</h3>
-              <p class="text-offwhite-dark text-base leading-loose max-w-sm text-center mt-2">De la smash clásica a
-                nuestra
-                joya: la hamburguesa de Wagyu. Carne de primera, pan brioche artesano y salsas caseras.</p>
-            </div>
-            <div
-              class="absolute inset-0 rounded-2xl border-2 border-fire/0 group-hover:border-fire/40 transition-all duration-500 pointer-events-none">
             </div>
           </div>
 
-          <!-- Card 3 -->
-          <div
-            class="card-hover group relative rounded-2xl overflow-hidden bg-charcoal-light border border-charcoal-medium delay-300">
-            <div class="relative h-56 sm:h-52 overflow-hidden">
-              <img src="images/asador_chicken.png" alt="El Asador"
-                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                loading="lazy" />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-amber-700/80 to-charcoal/90 opacity-60 group-hover:opacity-40 transition-opacity duration-500">
+          <!-- Asador Card -->
+          <div class="reveal card-hover group relative overflow-hidden rounded-3xl bg-charcoal-light border border-white/5">
+            <div class="h-64 overflow-hidden relative">
+              <img src="images/asador_chicken.png" alt="Pollo Asado" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-charcoal via-transparent to-transparent opacity-60"></div>
+              <span class="absolute top-4 left-4 glass px-4 py-1.5 rounded-full text-[10px] uppercase font-bold tracking-widest border border-white/10">Clásico</span>
+            </div>
+            <div class="p-10">
+              <h3 class="font-heading text-2xl font-bold mb-4 group-hover:text-fire transition-colors">Pollo al Horno</h3>
+              <p class="text-offwhite-dark text-sm leading-relaxed mb-8">Pollos de granja asados en su propio jugo con finas hierbas. Sabor inconfundible.</p>
+              <div class="flex items-center justify-between mt-auto">
+                <span class="text-xs uppercase tracking-widest text-[#666]">Desde</span>
+                <span class="font-heading text-xl font-bold text-mustard">10.00€</span>
               </div>
-              <span
-                class="absolute top-4 left-4 bg-charcoal/80 backdrop-blur-sm text-offwhite text-xs font-heading uppercase tracking-wider px-3 py-1.5 rounded-full">
-                👨‍🍳 Tradición
-              </span>
-            </div>
-            <div class="p-10 lg:p-12 text-center flex flex-col items-center justify-center">
-              <h3
-                class="font-heading text-2xl font-bold text-offwhite mb-6 group-hover:text-fire transition-colors duration-300 text-center">
-                El Asador</h3>
-              <p class="text-offwhite-dark text-base leading-loose max-w-sm text-center mt-2">Pollos asados dorados y
-                crujientes y paletillas de cordero que se deshacen. La tradición del asador de toda la vida.</p>
-            </div>
-            <div
-              class="absolute inset-0 rounded-2xl border-2 border-fire/0 group-hover:border-fire/40 transition-all duration-500 pointer-events-none">
             </div>
           </div>
 
-          <!-- Card 4 -->
-          <div
-            class="card-hover group relative rounded-2xl overflow-hidden bg-charcoal-light border border-charcoal-medium delay-400">
-            <div class="relative h-56 sm:h-52 overflow-hidden">
-              <img src="images/starters_tapas.png" alt="Para Empezar"
-                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                loading="lazy" />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-charcoal-medium/80 to-charcoal/90 opacity-60 group-hover:opacity-40 transition-opacity duration-500">
+          <!-- Tapas Card -->
+          <div class="reveal card-hover group relative overflow-hidden rounded-3xl bg-charcoal-light border border-white/5">
+            <div class="h-64 overflow-hidden relative">
+              <img src="images/starters_tapas.png" alt="Entrantes" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-charcoal via-transparent to-transparent opacity-60"></div>
+              <span class="absolute top-4 left-4 glass px-4 py-1.5 rounded-full text-[10px] uppercase font-bold tracking-widest border border-white/10">Para Compartir</span>
+            </div>
+            <div class="p-10">
+              <h3 class="font-heading text-2xl font-bold mb-4 group-hover:text-mustard transition-colors">Entrantes Caseros</h3>
+              <p class="text-offwhite-dark text-sm leading-relaxed mb-8">Croquetas de la abuela, bravas de verdad y alitas extra crujientes.</p>
+              <div class="flex items-center justify-between mt-auto">
+                <span class="text-xs uppercase tracking-widest text-[#666]">Desde</span>
+                <span class="font-heading text-xl font-bold text-mustard">6.50€</span>
               </div>
-              <span
-                class="absolute top-4 left-4 bg-charcoal/80 backdrop-blur-sm text-offwhite text-xs font-heading uppercase tracking-wider px-3 py-1.5 rounded-full">
-                🍴 Entrantes
-              </span>
-            </div>
-            <div class="p-10 lg:p-12 text-center flex flex-col items-center justify-center">
-              <h3
-                class="font-heading text-2xl font-bold text-offwhite mb-6 group-hover:text-fire transition-colors duration-300 text-center">
-                Para Empezar</h3>
-              <p class="text-offwhite-dark text-base leading-loose max-w-sm text-center mt-2">Croquetas caseras, patatas
-                bravas, alitas crujientes… El aperitivo perfecto mientras esperas el plato fuerte.</p>
-            </div>
-            <div
-              class="absolute inset-0 rounded-2xl border-2 border-fire/0 group-hover:border-fire/40 transition-all duration-500 pointer-events-none">
             </div>
           </div>
-
         </div>
 
-        <!-- CTA under cards -->
-        <div class="text-center mt-12">
-          <a href="tel:+34650656634"
-            class="inline-flex items-center gap-3 bg-fire hover:bg-fire-dark text-offwhite font-heading text-base uppercase tracking-wider px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-fire/30">
-            📞 Llama y recoge tu pedido caliente
+        <div class="reveal text-center mt-24">
+          <p class="text-offwhite-dark text-sm uppercase tracking-widest mb-10">Y muchas más delicias esperándote...</p>
+          <a href="tel:+34650656634" class="btn-shimmer inline-flex items-center gap-4 px-12 py-5 rounded-full text-lg font-heading font-bold uppercase tracking-widest text-white">
+            📞 Llamar para hacer pedido
           </a>
         </div>
       </div>
     </section>
 
-    <!-- SOCIAL PROOF -->
-    <section id="opiniones" class="py-32 sm:py-48 lg:py-64 bg-charcoal-light relative overflow-hidden flex flex-col items-center">
-      <div class="absolute top-10 right-10 w-40 h-40 bg-fire/5 rounded-full blur-3xl"></div>
-      <div class="absolute bottom-10 left-10 w-60 h-60 bg-mustard/5 rounded-full blur-3xl"></div>
-
-      <div class="reveal w-full max-w-[1000px] mx-auto px-6 lg:px-8 relative z-10">
-        <!-- Header -->
-        <div class="text-center mb-32 flex flex-col items-center">
-          <span
-            class="font-heading text-fire text-base uppercase tracking-[0.3em] font-semibold text-center block mb-4">Opiniones
-            Reales</span>
-          <h2 class="font-heading text-4xl sm:text-5xl md:text-6xl font-bold text-offwhite mt-4 mb-10 text-center">Lo
-            que
-            dicen nuestros vecinos</h2>
-          <div class="flex items-center justify-center gap-4 mt-6">
-            <div class="flex gap-1 text-mustard text-3xl">
-              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-            </div>
-            <span class="text-offwhite text-3xl font-bold font-heading">4.7</span>
-            <span class="text-offwhite-dark text-base">en Google</span>
+    <!-- Section: Opiniones (Social Proof) -->
+    <section id="opiniones" class="py-40 bg-[#0a0a0a] relative overflow-hidden">
+      <div class="max-w-6xl mx-auto px-6 relative z-10">
+        <div class="reveal flex flex-col items-center text-center mb-24">
+          <span class="font-heading text-fire text-sm uppercase tracking-[0.4em] font-bold mb-6">Vecinos Felices</span>
+          <h2 class="font-heading text-4xl md:text-6xl font-bold mb-8">Voces Reales</h2>
+          <div class="flex items-center gap-3 mt-4 glass px-6 py-3 rounded-full border border-white/5">
+            <div class="flex text-mustard text-xl">★★★★★</div>
+            <span class="font-heading font-bold text-2xl">4.7</span>
+            <span class="text-offwhite-dark text-xs uppercase tracking-widest">en Google</span>
           </div>
         </div>
 
-        <!-- Reviews grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10 xl:gap-12">
-
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Review 1 -->
-          <div
-            class="bg-charcoal border border-charcoal-medium rounded-2xl p-10 lg:p-12 hover:-translate-y-2 hover:shadow-2xl hover:border-fire/30 transition-all duration-500 group flex flex-col items-center text-center">
-            <div class="flex gap-1 text-mustard text-lg mb-5">
-              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-            </div>
-            <p class="text-offwhite-dark text-lg leading-loose mb-10 italic flex-grow text-center mt-4">
-              "¡Los pollos asados son espectaculares! Crujientes por fuera y jugosísimos por dentro. Se nota que es
-              comida hecha con cariño, como la de toda la vida."
+          <div class="reveal review-card glass p-10 rounded-3xl border border-white/5">
+            <p class="text-offwhite mb-10 italic leading-relaxed pt-4">
+              "Espectaculares los pollos y las pizzas. Se nota que es todo casero. Si quieres pizza de verdad en Horche, este es el sitio."
             </p>
-            <div class="flex flex-col items-center gap-3 w-full pt-4 border-t border-charcoal-medium/50 mt-auto">
-              <div
-                class="w-12 h-12 rounded-full bg-fire/20 flex items-center justify-center text-fire font-bold text-lg font-heading">
-                M</div>
-              <div class="flex flex-col items-center">
-                <span class="text-offwhite font-medium w-full block mb-1">María G.</span>
-                <span class="text-fire/70 text-xs font-heading uppercase tracking-widest block">el asador</span>
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-fire/20 border border-fire/40 flex items-center justify-center font-heading font-bold text-fire">MG</div>
+              <div>
+                <h4 class="font-heading font-bold text-lg uppercase tracking-tight">Miguel García</h4>
+                <span class="text-[10px] uppercase tracking-widest text-fire font-bold">Local Guide</span>
               </div>
             </div>
           </div>
-
           <!-- Review 2 -->
-          <div
-            class="bg-charcoal border border-charcoal-medium rounded-2xl p-10 lg:p-12 hover:-translate-y-2 hover:shadow-2xl hover:border-fire/30 transition-all duration-500 group flex flex-col items-center text-center">
-            <div class="flex gap-1 text-mustard text-lg mb-5">
-              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-            </div>
-            <p class="text-offwhite-dark text-lg leading-loose mb-10 italic flex-grow text-center mt-4">
-              "Las pizzas del horno de piedra no tienen comparación en la zona. Y las hamburguesas de Wagyu... ¡brutales!
-              Relación calidad-precio insuperable."
+          <div class="reveal review-card glass p-10 rounded-3xl border border-fire/10 scale-105 z-10 shadow-2xl">
+            <p class="text-offwhite mb-10 italic leading-relaxed pt-4">
+              "Las burguers de Wagyu son de otro planeta. El pan brioche aguanta perfectamente y la carne tiene un sabor increíble. Calidad-precio de 10."
             </p>
-            <div class="flex flex-col items-center gap-3 w-full pt-4 border-t border-charcoal-medium/50 mt-auto">
-              <div
-                class="w-12 h-12 rounded-full bg-fire/20 flex items-center justify-center text-fire font-bold text-lg font-heading">
-                C</div>
-              <div class="flex flex-col items-center">
-                <span class="text-offwhite font-medium w-full block mb-1">Carlos R.</span>
-                <span class="text-fire/70 text-xs font-heading uppercase tracking-widest block">el sabor</span>
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-mustard/20 border border-mustard/40 flex items-center justify-center font-heading font-bold text-mustard">ST</div>
+              <div>
+                <h4 class="font-heading font-bold text-lg uppercase tracking-tight">Sara Torres</h4>
+                <span class="text-[10px] uppercase tracking-widest text-[#888]">Cliente Frecuente</span>
               </div>
             </div>
           </div>
-
           <!-- Review 3 -->
-          <div
-            class="bg-charcoal border border-charcoal-medium rounded-2xl p-10 lg:p-12 hover:-translate-y-2 hover:shadow-2xl hover:border-fire/30 transition-all duration-500 group flex flex-col items-center text-center">
-            <div class="flex gap-1 text-mustard text-lg mb-5">
-              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-            </div>
-            <p class="text-offwhite-dark text-lg leading-loose mb-10 italic flex-grow text-center mt-4">
-              "El trato es familiar y cercano, te sientes como en casa. Los niños repiten siempre. Recoger el pedido es
-              rapidísimo, todo listo y calentito."
+          <div class="reveal review-card glass p-10 rounded-3xl border border-white/5">
+            <p class="text-offwhite mb-10 italic leading-relaxed pt-4">
+              "El horno de piedra marca la diferencia. Base fina y crujiente, nada que ver con las pizzas de cadena. Recomendable 100%."
             </p>
-            <div class="flex flex-col items-center gap-3 w-full pt-4 border-t border-charcoal-medium/50 mt-auto">
-              <div
-                class="w-12 h-12 rounded-full bg-fire/20 flex items-center justify-center text-fire font-bold text-lg font-heading">
-                L</div>
-              <div class="flex flex-col items-center">
-                <span class="text-offwhite font-medium w-full block mb-1">Laura M.</span>
-                <span class="text-fire/70 text-xs font-heading uppercase tracking-widest block">trato familiar</span>
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-charcoal-medium border border-white/10 flex items-center justify-center font-heading font-bold text-offwhite">RP</div>
+              <div>
+                <h4 class="font-heading font-bold text-lg uppercase tracking-tight">Raúl Pérez</h4>
+                <span class="text-[10px] uppercase tracking-widest text-[#888]">Cliente Local</span>
               </div>
-            </div>
-          </div>
-
-          <!-- Review 4 -->
-          <div
-            class="bg-charcoal border border-charcoal-medium rounded-2xl p-10 lg:p-12 hover:-translate-y-2 hover:shadow-2xl hover:border-fire/30 transition-all duration-500 group flex flex-col items-center text-center">
-            <div class="flex gap-1 text-mustard text-lg mb-5">
-              <span>★</span><span>★</span><span>★</span><span>★</span><span class="text-charcoal-medium">★</span>
-            </div>
-            <p class="text-offwhite-dark text-lg leading-loose mb-10 italic flex-grow text-center mt-4">
-              "Las paletillas de cordero son para morirse. Cantidad generosísima y un sabor de esos que te hacen volver
-              cada fin de semana. ¡Imprescindible!"
-            </p>
-            <div class="flex flex-col items-center gap-3 w-full pt-4 border-t border-charcoal-medium/50 mt-auto">
-              <div
-                class="w-12 h-12 rounded-full bg-fire/20 flex items-center justify-center text-fire font-bold text-lg font-heading">
-                J</div>
-              <div class="flex flex-col items-center">
-                <span class="text-offwhite font-medium w-full block mb-1">Javier P.</span>
-                <span class="text-fire/70 text-xs font-heading uppercase tracking-widest block">cantidad</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- HORARIOS -->
-    <section id="horarios" class="py-32 sm:py-48 lg:py-64 bg-charcoal relative flex flex-col items-center">
-      <div class="reveal w-full max-w-[1000px] mx-auto px-6 lg:px-8">
-        <div class="text-center mb-32">
-          <span class="font-heading text-fire text-base uppercase tracking-[0.3em] font-semibold mb-4">Cuándo
-            encontrarnos</span>
-          <h2 class="font-heading text-4xl sm:text-5xl md:text-6xl font-bold text-offwhite mt-6 mb-10">Horarios y
-            Recogida</h2>
-        </div>
-
-        <div
-          class="bg-charcoal-light border border-charcoal-medium rounded-3xl p-12 sm:p-20 max-w-4xl mx-auto shadow-2xl">
-          <!-- Days -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-12 lg:gap-16 mb-20">
-            <!-- Open days -->
-            <div class="bg-charcoal rounded-2xl p-6 border border-charcoal-medium">
-              <div class="flex items-center gap-3 mb-4">
-                <span class="text-2xl">🟢</span>
-                <h3 class="font-heading text-lg font-bold text-offwhite uppercase tracking-wider">Jueves a Domingo</h3>
-              </div>
-              <div class="space-y-3">
-                <div class="flex items-center justify-between">
-                  <span class="text-offwhite-dark text-sm">Comidas</span>
-                  <span class="text-offwhite font-semibold font-heading text-lg">10:00 – 15:00</span>
-                </div>
-                <div class="w-full h-px bg-charcoal-medium"></div>
-                <div class="flex items-center justify-between">
-                  <span class="text-offwhite-dark text-sm">Cenas</span>
-                  <span class="text-offwhite font-semibold font-heading text-lg">19:00 – 23:00</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Closed days -->
-            <div class="bg-charcoal rounded-2xl p-6 border border-charcoal-medium">
-              <div class="flex items-center gap-3 mb-4">
-                <span class="text-2xl">🔴</span>
-                <h3 class="font-heading text-lg font-bold text-offwhite uppercase tracking-wider">Lun – Miércoles</h3>
-              </div>
-              <div class="flex items-center justify-center h-20">
-                <span class="text-offwhite-dark text-lg font-heading uppercase tracking-wider">Cerrado</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- CTA Highlight Box -->
-          <div
-            class="relative bg-gradient-to-r from-fire/15 via-fire/10 to-mustard/10 border-2 border-fire/40 rounded-2xl p-6 sm:p-8 text-center overflow-hidden">
-            <div class="absolute -top-10 -right-10 w-40 h-40 bg-fire/10 rounded-full blur-3xl"></div>
-            <span class="text-4xl mb-4 block">🔥</span>
-            <h3 class="font-heading text-xl sm:text-2xl font-bold text-offwhite mb-3">Para disfrutar al máximo</h3>
-            <p class="text-offwhite-dark text-base sm:text-lg leading-relaxed mb-6 max-w-lg mx-auto">
-              Te recomendamos <strong class="text-fire font-semibold">comer en nuestro local</strong> o
-              <strong class="text-mustard font-semibold">recoger tu pedido</strong> recién hecho — así te lo llevas
-              calentito y en su punto.
-            </p>
-
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href="https://maps.google.com/?q=Asador+Pizzeria+Daymay+Horche" target="_blank"
-                rel="noopener noreferrer"
-                class="w-full sm:w-auto btn-shimmer text-offwhite font-heading uppercase tracking-wider px-8 py-4 rounded-full hover:scale-105 transition-transform duration-300 font-semibold">
-                📍 Ven a vernos
-              </a>
-              <a href="tel:+34650656634"
-                class="w-full sm:w-auto border-2 border-mustard text-mustard font-heading uppercase tracking-wider px-8 py-4 rounded-full hover:bg-mustard hover:text-charcoal transition-all duration-300 font-semibold">
-                📞 Recoge tu pedido caliente
-              </a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer id="contacto" class="bg-charcoal-light border-t border-charcoal-medium flex flex-col items-center">
-      <div class="w-full max-w-[1000px] mx-auto px-6 lg:px-8 py-24 lg:py-32">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-16 lg:gap-20">
-          <div>
-            <div class="flex items-center gap-2 mb-4">
-              <span class="text-3xl">🔥</span>
-              <span class="font-heading text-2xl font-bold text-offwhite">DAYMAY</span>
+    <!-- Section: Horarios -->
+    <section id="horarios" class="py-40 bg-charcoal">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="reveal glass p-12 md:p-20 rounded-[3rem] border border-white/5 relative overflow-hidden">
+          <div class="absolute top-0 right-0 p-12 text-7xl opacity-5 pointer-events-none">⏱️</div>
+          
+          <div class="text-center mb-16">
+            <span class="font-heading text-mustard text-sm uppercase tracking-[0.4em] font-bold mb-6">Planifica tu visita</span>
+            <h2 class="font-heading text-4xl md:text-5xl font-bold mb-8">Horarios de Servicio</h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div class="flex flex-col gap-6">
+              <h3 class="font-heading text-xl font-bold uppercase tracking-widest text-fire flex items-center gap-3">
+                <span class="h-2 w-2 rounded-full bg-fire"></span>
+                Jueves a Domingo
+              </h3>
+              <div class="flex flex-col gap-4">
+                <div class="flex justify-between items-center border-b border-white/5 pb-4">
+                  <span class="text-offwhite-dark">Mañanas</span>
+                  <span class="font-heading font-bold text-2xl tracking-tighter">10:00 - 15:00</span>
+                </div>
+                <div class="flex justify-between items-center border-b border-white/5 pb-4">
+                  <span class="text-offwhite-dark">Tardes / Noches</span>
+                  <span class="font-heading font-bold text-2xl tracking-tighter">19:00 - 23:00</span>
+                </div>
+              </div>
             </div>
-            <p class="text-offwhite-dark text-sm leading-relaxed mb-4">
-              Asador Pizzería Daymay — Horche, Guadalajara.<br />
-              Comida casera de verdad, hecha con cariño desde siempre.
+
+            <div class="flex flex-col gap-6 opacity-40">
+              <h3 class="font-heading text-xl font-bold uppercase tracking-widest flex items-center gap-3">
+                <span class="h-2 w-2 rounded-full bg-white/20"></span>
+                Lunes a Miércoles
+              </h3>
+              <div class="h-full flex items-center justify-center p-8 border-2 border-dashed border-white/5 rounded-2xl">
+                <span class="font-heading font-bold text-3xl uppercase tracking-[0.2em]">Cerrado</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-16 p-8 rounded-2xl bg-fire/5 border border-fire/20 text-center">
+            <p class="text-offwhite leading-relaxed mb-2 font-medium italic">"Recomendamos recoger el pedido recién hecho para disfrutarlo en su punto."</p>
+            <p class="text-offwhite-dark text-sm">Llámanos con antelación para evitar esperas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto" class="pt-40 pb-20 bg-[#050505] border-t border-white/5 relative">
+      <div class="max-w-[1400px] mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-20 mb-20 text-center lg:text-left">
+          
+          <div class="lg:col-span-2">
+            <a href="#hero" class="flex items-center gap-3 justify-center lg:justify-start mb-10 group">
+              <span class="text-4xl filter drop-shadow-[0_0_15px_rgba(212,81,30,0.6)]">🔥</span>
+              <span class="font-heading text-4xl font-bold tracking-tighter">DAYMAY</span>
+            </a>
+            <p class="text-offwhite-dark text-lg md:text-xl leading-relaxed max-w-xl mx-auto lg:mx-0 mb-10">
+              Transformando ingredientes de calidad en momentos inolvidables. 
+              <span class="text-fire font-medium">Sabor tradicional</span>, <span class="text-mustard font-medium">técnica artesana</span>.
             </p>
-            <div class="flex flex-col gap-3">
-              <a href="https://www.instagram.com/asadordaymay2/" target="_blank" rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 text-fire hover:text-fire-light transition-colors duration-300 font-heading uppercase tracking-wider text-sm">
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path
-                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
-                </svg>
-                Síguenos en Instagram
+            <div class="flex gap-6 justify-center lg:justify-start">
+              <a href="https://www.instagram.com/asadordaymay2/" target="_blank" class="w-14 h-14 glass rounded-full flex items-center justify-center hover:bg-fire hover:text-white transition-all text-offwhite-dark">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07/"></path><path d="M12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path></svg>
               </a>
-              <a href="https://www.tiktok.com/@asador.daymay" target="_blank" rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 text-fire hover:text-fire-light transition-colors duration-300 font-heading uppercase tracking-wider text-sm">
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
-                </svg>
-                Síguenos en TikTok
+              <a href="https://www.tiktok.com/@asador.daymay" target="_blank" class="w-14 h-14 glass rounded-full flex items-center justify-center hover:bg-mustard hover:text-charcoal transition-all text-offwhite-dark">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"></path></svg>
               </a>
             </div>
           </div>
+
           <div>
-            <h4 class="font-heading text-lg font-bold text-offwhite uppercase tracking-wider mb-4">📍 Encuéntranos</h4>
-            <p class="text-offwhite-dark text-sm leading-relaxed mb-4">
-              Horche, Guadalajara<br />(Castilla-La Mancha)
+            <h4 class="font-heading text-xl font-bold uppercase tracking-widest text-fire mb-8">Ubicación</h4>
+            <p class="text-offwhite-dark text-lg leading-relaxed mb-6">
+              Horche, Guadalajara<br>
+              Castilla-La Mancha
             </p>
-            <a href="https://maps.google.com/?q=Asador+Pizzeria+Daymay+Horche" target="_blank" rel="noopener noreferrer"
-              class="inline-flex items-center gap-2 bg-fire/10 hover:bg-fire/20 text-fire border border-fire/30 rounded-full px-5 py-2.5 text-sm font-heading uppercase tracking-wider transition-all duration-300">
-              Ver en Google Maps →
+            <a href="https://maps.google.com/?q=Asador+Pizzeria+Daymay+Horche" target="_blank" class="text-mustard hover:text-fire transition-colors font-bold uppercase text-xs tracking-widest border-b border-mustard/20 pb-2">
+              Cómo llegar →
             </a>
           </div>
+
           <div>
-            <h4 class="font-heading text-lg font-bold text-offwhite uppercase tracking-wider mb-4">📞 Haz tu pedido</h4>
-            <a href="tel:+34650656634"
-              class="block text-fire text-3xl sm:text-4xl font-heading font-bold hover:text-fire-light transition-colors duration-300 mb-4">650
-              65 66 34</a>
-            <p class="text-offwhite-dark text-sm leading-relaxed">
-              Llama, pide y recoge en local.<br />
-              <span class="text-mustard font-medium">Todo listo y calentito.</span>
+            <h4 class="font-heading text-xl font-bold uppercase tracking-widest text-fire mb-8">Contacto</h4>
+            <p class="text-offwhite-dark text-xs uppercase tracking-widest mb-4">Pedidos al:</p>
+            <a href="tel:+34650656634" class="block font-heading text-4xl font-bold text-white hover:text-fire transition-colors">
+              650 65 66 34
+            </a>
+            <p class="mt-8 text-offwhite-dark/40 text-xs uppercase tracking-widest">
+              Hecho con 🔥 en Horche
             </p>
           </div>
         </div>
-        <div
-          class="mt-12 pt-8 border-t border-charcoal-medium flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p class="text-charcoal-medium text-xs text-center sm:text-left">© 2026 Asador Pizzería Daymay — Horche,
-            Guadalajara. Todos los derechos reservados.</p>
-          <div class="flex items-center gap-2 text-offwhite-dark text-xs">
-            <span>Hecho con</span>
-            <span class="text-fire">🔥</span>
-            <span>y mucho cariño</span>
+
+        <div class="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+          <p class="text-offwhite-dark/30 text-[10px] uppercase tracking-[0.3em]">
+            © 2026 ASADOR PIZZERIA DAYMAY. TODOS LOS DERECHOS RESERVADOS.
+          </p>
+          <div class="flex items-center gap-2 text-offwhite-dark/20 text-[10px] uppercase tracking-[0.3em] font-bold">
+            <span>Experiencia Premium</span>
+            <span class="text-fire">●</span>
+            <span>Tradición Local</span>
           </div>
         </div>
       </div>
     </footer>
 
-  </div> <!-- End Main App Container -->
+  </div> <!-- End Container -->
 
   <!-- Custom Script -->
   <script src="main.js"></script>
